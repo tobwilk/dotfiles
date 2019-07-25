@@ -36,7 +36,7 @@ set hlsearch
 "ino <up> <Nop>
 
 " NERDTree toggle key - ctrl+n
- map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 "map <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
@@ -55,5 +55,3 @@ set noswapfile " don't keep swp files either
 "colours
 highlight LineNr ctermfg=grey
 
-" Load plugins
-call pathogen#infect()
