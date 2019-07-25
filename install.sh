@@ -16,6 +16,7 @@ sudo apt-get install -y python-pip python3-pip
 echo "Configuring git"
 git config --global user.name "Toby W"
 git config --global user.email "foo@bar.com"
+git config --global core.editor "vim"
 
 # Pull the git submodules
 #echo "Pulling git submodules"
