@@ -23,3 +23,10 @@ Kill pain           hotkey + x
 New vertical        hotkey + |
 New horizontal      hotkey + -
 Move around         hotkey + up/down/left/right
+
+
+# Docker
+
+run a temporaty node container, mounting the current directory:
+  docker run -it --rm -p 5000:5000 -v $(pwd):app -w/app node bash
+
