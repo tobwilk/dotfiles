@@ -13,9 +13,36 @@ set cursorline
 set smarttab
 set number
 syntax on
-
+            
 " set leader key
-"let mapleader=","
+let mapleader=","
+
+" USE VUNDLE
+" set the runtimepath to include Vundle and initialize
+" Make sure to clone git into the vim directory using:
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+" inside vim, run :PluginInstall
+" to search plugins, run :PluginSearch foobar
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Add plugins here
+"
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'morhetz/gruvbox'
+" Plugin 'git@github.com:Valloric/YouCompleteMe.git'
+
+call vundle#end()
+filetype plugin indent on
+
+
 
 " Disable auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -36,8 +63,8 @@ set hlsearch
 "ino <up> <Nop>
 
 " NERDTree toggle key - ctrl+n
-map <C-n> :NERDTreeToggle<CR>
-"map <leader>n :NERDTreeToggle<CR>
+"map <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " Map jj to escape insert mode, its quicker
@@ -53,5 +80,6 @@ set nowritebackup " do not keep a backup while working
 set noswapfile " don't keep swp files either
 
 "colours
-highlight LineNr ctermfg=grey
+colorscheme gruvbox
+set background=dark
 
