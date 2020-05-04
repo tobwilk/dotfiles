@@ -1,3 +1,10 @@
+# VIM
+
+    - leader + n          NerdTree Toggle
+    - { or }              Up / Down paragraph
+    - H, M, L             Move to Top, Middle or bottom
+
+
 # tmux
 
 hotkey: ctrl + b

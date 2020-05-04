@@ -15,7 +15,7 @@ set number
 syntax on
             
 " set leader key
-let mapleader=","
+let mapleader=" "
 
 " USE VUNDLE
 " set the runtimepath to include Vundle and initialize
@@ -52,6 +52,8 @@ set incsearch
 set showmatch
 set hlsearch
 
+" KEYBOARD BINDINGS
+
 " Disable the arrow keys to force good vim practice
 "no <down> <Nop>
 "no <left> <Nop>
@@ -69,6 +71,15 @@ let NERDTreeShowHidden=1
 
 " Map jj to escape insert mode, its quicker
 imap jj <Esc>
+
+" Switch vim windows
+map <leader>h :wincmd h<CR>
+map <leader>j :wincmd j<CR>
+map <leader>k :wincmd k<CR>
+map <leader>l :wincmd l<CR>
+
+nnoremap <Leader>pt :NERDTreeToggle<Enter>
+nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 
 " Filetype stuff
 filetype plugin on 
