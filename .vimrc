@@ -94,3 +94,9 @@ set noswapfile " don't keep swp files either
 colorscheme gruvbox
 set background=dark
 
+" enable spelling for markdown. ctl+ N/P auto completes
+autocmd BufRead, BufNewFile *.md setlocal spell spelllang=en_gb
+set complete+=kspell
+
+" Line wrap for markdown
+au BufRead,BufNewFile *.md setlocal textwidth=80

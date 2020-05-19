@@ -13,6 +13,7 @@ specific to my configuration
         - leader + n         toggle
         - enter              open folder
         - t                  open folder in new tab
+        - m                  Brings up nerdtree menu. a creates a new file
     
     - panes
         - hjkl              move between panes
@@ -23,6 +24,18 @@ specific to my configuration
         - H, M, L           Move to Top, Middle or bottom
         - e                 Move left by word
 
+    - moving text
+        - v                 enters visual mode
+        - y                 yank, copies the text
+        - d                 delete, but it also cuts
+        - p                 paste 
+
+
+
+    - spelling
+        - ]s and [s         moves between mispelled words
+        - z=                shows spelling alternatives
+        - zg                adds word to dictionary 
 # tmux
 
     - Session managment
