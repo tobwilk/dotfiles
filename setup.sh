@@ -18,27 +18,6 @@ git config --global user.name "Toby W"
 git config --global user.email "foo@bar.com"
 git config --global core.editor "vim"
 
-# Pull the git submodules
-#echo "Pulling git submodules"
-#git submodule init
-#git submodule update
-
-#symlink config files
-echo "Creating symlinks"
-DIR="$(cd "$(dirname "$0")" && pwd)"
-ln -sf $DIR/.vimrc ~/.vimrc
-ln -sfn $DIR/.vim ~/.vim
-ln -sf $DIR/.tmux.conf ~/.tmux.conf
-
-ln -sf $DIR/tmux-createnew.sh ~/tmux-createnew.sh
-ln -sf $DIR/tmuxme.sh ~/tmux-attatch.sh
-
-ln -sf $DIR/cheatsheet.md ~/cheatsheet.md
-
-# install aliases
-echo "Adding bashrc aliases"
-./aliases.sh
-
 echo "Sourcing files"
 tmux source ~/.tmux.conf
 source ~/.bashrc
