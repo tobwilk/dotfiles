@@ -1,7 +1,7 @@
 ==========================
     TOBYS CHEET SHEET
 ==========================
-These short cuts are based on my configuration
+These shortcuts are based on my configuration
 
 # Vim
 
@@ -23,9 +23,11 @@ specific to my configuration
         - { or }            Up / Down paragraph
         - H, M, L           Move to Top, Middle or bottom
         - e                 Move left by word
+        - A                 Move to end of line, switch to insert
+        - $                 move to end of line
 
     - moving text
-        - v                 enters visual mode
+       - v                 enters visual mode
         - y                 yank, copies the text
         - d                 delete, but it also cuts
         - p                 paste 
