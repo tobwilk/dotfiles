@@ -42,8 +42,6 @@ Plugin 'morhetz/gruvbox'
 call vundle#end()
 filetype plugin indent on
 
-
-
 " Disable auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -100,3 +98,4 @@ set complete+=kspell
 
 " Line wrap for markdown
 au BufRead,BufNewFile *.md setlocal textwidth=80
+set autoindent
