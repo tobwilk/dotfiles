@@ -12,6 +12,4 @@ echo "-> .tmux.conf"
 ln -sf $DIR/.tmux.conf ~/.tmux.conf
 
 echo "-> home folder shortcuts"
-ln -sf $DIR/tmux-createnew.sh ~/tmux-createnew.sh
-ln -sf $DIR/tmuxme.sh ~/tmux-attatch.sh
 ln -sf $DIR/cheatsheet.md ~/cheatsheet.md
