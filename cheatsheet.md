@@ -1,9 +1,6 @@
-==========================
-    TOBYS CHEET SHEET
-==========================
+========================== TOBYS CHEET SHEET ==========================
 
-These shortcuts are based on my personal configuration. To see
-them, check out the dotfiles.
+These shortcuts are based on my personal configuration
 
 
 # Vim
@@ -17,7 +14,9 @@ specific to my configuration
         - enter                 open folder
         - t                     open folder in new tab
         - m                     Brings up nerdtree menu. a creates a new file
-    
+        - i                     opens selected horizontally   
+        - s                     opens selected vertically
+ 
     - panes
         - hjkl                  move between panes
         - gt                    move between tabs
@@ -33,7 +32,7 @@ specific to my configuration
         - $                     move to end of line
         - 0 or ^                move to start of line
 
-    - intert
+    - insert
         - i                     insert mode at current place
         - A                     insert mode at end of line
 
@@ -53,6 +52,8 @@ specific to my configuration
         - z=                    shows spelling alternatives
         - zg                    adds word to dictionary 
 
+    - Misc
+        - gqG                   At the start of the file, word wrap
 
 # tmux
 
@@ -64,8 +65,7 @@ specific to my configuration
 
     - leader is ctrl + a
 
-    - General
-        Disconnect                      hotkey + d
+    - General Disconnect                      hotkey + d
 
     - Windows
         - New window                    hotkey + c

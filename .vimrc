@@ -2,6 +2,10 @@
 " Tobys vimrc file
 "
 
+set nocompatible
+filetype plugin on
+syntax on
+
 " Standard stuff
 set backspace=2
 set tabstop=4
@@ -25,7 +29,6 @@ let mapleader=" "
 " inside vim, run :PluginInstall
 " to search plugins, run :PluginSearch foobar
 
-set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -37,6 +40,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'morhetz/gruvbox'
+Plugin 'vimwiki/vimwiki'
 " Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 
 call vundle#end()
@@ -99,3 +103,12 @@ set complete+=kspell
 " Line wrap for markdown
 au BufRead,BufNewFile *.md setlocal textwidth=80
 set autoindent
+
+" vimWiki config
+let g:vimwiki_list = [{'path': '~/Dropbox/folders/1_PROJECTS/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+" Set tmux pane title, to open vim filename
+autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
+
+
