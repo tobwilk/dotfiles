@@ -52,6 +52,11 @@ specific to my configuration
         - z=                    shows spelling alternatives
         - zg                    adds word to dictionary 
 
+    - VimWiki
+        - ww                    jump to vimWiki index page
+        - Tab                   Jump to next link in page
+        - Enter/Backspace       Jump into a link, or back a link
+
     - Misc
         - gqG                   At the start of the file, word wrap
 
