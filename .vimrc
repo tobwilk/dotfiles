@@ -104,11 +104,12 @@ set complete+=kspell
 au BufRead,BufNewFile *.md setlocal textwidth=80
 set autoindent
 
-" vimWiki config
+" vimWiki config. Set this the root of your VimWIki directory
 let g:vimwiki_list = [{'path': '~/Dropbox/folders/1_PROJECTS/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " Set tmux pane title, to open vim filename
-autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
+" autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
+set laststatus=2
 
 
