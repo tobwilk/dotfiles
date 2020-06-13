@@ -1,6 +1,7 @@
 "
 " Tobys vimrc
-"
+
+" Global settings
 set encoding=utf-8
 set nocompatible
 set backspace=2
@@ -10,15 +11,17 @@ set ruler
 set shiftwidth=4
 set softtabstop=4
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 set smarttab
 set number
 set laststatus=2
 set ignorecase
 set mouse=a
+set clipboard=unnamed
 filetype plugin on
 filetype indent on
 syntax on
+
 
 " leader key
 let mapleader=" "
@@ -43,9 +46,6 @@ call vundle#end()
 filetype plugin indent on
 
 " -------- Plugins -----------------------------------
-
-" Make vim work with system clipboard
-set clipboard+=unnamedplus
 
 " Disable auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -95,9 +95,22 @@ set complete+=kspell
 au BufRead,BufNewFile *.md setlocal textwidth=80
 set autoindent
 
+" ---- VimWiki --------------
 " vimWiki config. Set this the root of your VimWIki directory
 let g:vimwiki_list = [{'path': '~/Dropbox/folders/1_PROJECTS/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+
+command! Diary VimwikiDiaryIndex
+augroup vimwikigroup
+    autocmd!
+    " automatically update links on read diary
+    autocmd BufRead,BufNewFile diary.wiki VimwikiDiaryGenerateLinks
+augroup end
+
+command! Genlinks VimwikiDiaryGenerateLinks
+
+
+" ---- VimWiki ----
 
 " Set tmux pane title, to open vim filename
 " autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
@@ -108,3 +121,5 @@ autocmd BufWritePre * %s/\s\+$//e
 " Alias write and quit to Q
 nnoremap <leader>q :wq<CR>
 nnoremap <leader>w :w<CR>
+
+

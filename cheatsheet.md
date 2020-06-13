@@ -9,18 +9,18 @@ specific to my configuration
 
     - leader is space
 
-    - Nerd Tree    
+    - Nerd Tree
         - leader + n            toggle
         - enter                 open folder
         - t                     open folder in new tab
         - m                     Brings up nerdtree menu. a creates a new file
-        - i                     opens selected horizontally   
+        - i                     opens selected horizontally
         - s                     opens selected vertically
- 
+
     - panes
         - hjkl                  move between panes
         - gt                    move between tabs
-    
+
     - Moving around
         - { or }                Up / Down paragraph
         - H, M, L               Move to Top, Middle or bottom of current view
@@ -40,7 +40,7 @@ specific to my configuration
         - v                     enters visual mode
         - y                     yank, copies the text
         - d                     delete, but it also cuts
-        - p                     paste 
+        - p                     paste
 
     - serching and replace
         - :%s/foo/bar/g         find all foo, and replace with bar
@@ -50,12 +50,12 @@ specific to my configuration
     - spelling
         - ]s and [s             moves between mispelled words
         - z=                    shows spelling alternatives
-        - zg                    adds word to dictionary 
+        - zg                    adds word to dictionary
 
     - VimWiki
-        - ww                    jump to vimWiki index page
-        - Tab                   Jump to next link in page
-        - Enter/Backspace       Jump into a link, or back a link
+        - L,ww                  Go to Vimwiki homepage
+        - L,w,L,w               Go to todays diary page
+        - :Diary                Go to diary index page
 
     - Misc
         - gqG                   At the start of the file, word wrap
@@ -80,7 +80,7 @@ specific to my configuration
         - next window                   hotkey + n
         - previouse window              hotkey + p
 
-    - Pains    
+    - Pains
         - Kill pain                     hotkey + x
         - New vertical                  hotkey + |
         - New horizontal                hotkey + -
