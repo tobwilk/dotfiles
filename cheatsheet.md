@@ -7,9 +7,32 @@ These shortcuts are based on my personal configuration
 
 specific to my configuration
 
-    - leader is space
+    - leader is space. good alternative is ,
 
-    - Nerd Tree
+    - Basics Level 1
+        - j & k                  up and down
+        - h & l                  left and right
+        - w & b                  Forward & back a word
+        - yy                     yank a line
+        - dd                     delete a line
+        - p                      paste the line below
+        - u                      undo
+        - v (lowercase)          highlight whole line
+        - V                      higlights at cursor position
+        - i                      Insert mode
+        - esc or jj              leave insert mode. Note, jj is not default.
+
+    - Basics Level 2
+        - o                     insert mode, on new line below
+        - O                     same thing, but upwards
+        - shift+p               Paste one line up
+        - a                     insert, one char over
+        - shift+i               Insert at start of line
+        - shift+a               Insert at end of line
+        - /                     search mode. Hop with n & shift+n
+        - * or #                hop between occurances of what your hovered on
+
+     -Nerd Tree
         - leader + n            toggle
         - enter                 open folder
         - t                     open folder in new tab
@@ -41,6 +64,9 @@ specific to my configuration
         - y                     yank, copies the text
         - d                     delete, but it also cuts
         - p                     paste
+        - >>                    Indent right
+        - <<                    Indent left
+
 
     - serching and replace
         - :%s/foo/bar/g         find all foo, and replace with bar
@@ -58,7 +84,7 @@ specific to my configuration
         - :Diary                Go to diary index page
 
     - Misc
-        - gqG                   At the start of the file, word wrap
+        - gqG                   move to top of file (gg), then word wrap
 
 # tmux
 

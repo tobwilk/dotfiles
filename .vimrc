@@ -5,22 +5,26 @@
 set encoding=utf-8
 set nocompatible
 set backspace=2
-set tabstop=4
-set expandtab
-set ruler
-set shiftwidth=4
-set softtabstop=4
+set tabstop=4           " tabs are n spaces
+set expandtab           " expand tabs by default (overloadable per file type)
+set ruler               " underlines current line
+set shiftwidth=4        " number of spaces to use for autoindenting
+set softtabstop=4       " when hitting <BS>, pretend like a tab is removed, even if spaces
 set cursorline
 "set cursorcolumn
-set smarttab
-set number
+set smarttab            "insert tabs on the start of a line according to shiftwidth, not tabstop
+set smartindent
+set number              " Shows line numbers
 set laststatus=2
 set ignorecase
 set mouse=a
 set clipboard=unnamed
+set textwidth=80
+set autoindent          " always set autoindenting on
 filetype plugin on
 filetype indent on
 syntax on
+
 
 
 " leader key
