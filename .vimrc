@@ -1,6 +1,9 @@
 "
 " Tobys vimrc
 
+" leader key. space and , are good options
+let mapleader=" "
+
 " Global settings
 set encoding=utf-8
 set nocompatible
@@ -21,35 +24,24 @@ set mouse=a
 set clipboard=unnamed
 set textwidth=80
 set autoindent          " always set autoindenting on
+set foldmethod=indent   " Allow folding based on ident
 filetype plugin on
 filetype indent on
 syntax on
 
 
+" ------ Plugins -------------------------------------
+" Make sure Plug is installed first
+call plug#begin('~/.vim/plugged')
 
-" leader key
-let mapleader=" "
+Plug 'morhetz/gruvbox'
+Plug 'scrooloose/nerdtree'
+Plug 'vimwiki/vimwiki'
 
+call plug#end()
+" Reload .vimrc and :PlugInstall to install plugins
+" ----- Plugins end ----------------------------------
 
-
-" ---------- Plugins --------------------------------
-" inside vim, run :PluginInstall
-
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'morhetz/gruvbox'
-Plugin 'vimwiki/vimwiki'
-" Plugin 'git@github.com:Valloric/YouCompleteMe.git'
-
-call vundle#end()
-filetype plugin indent on
-
-" -------- Plugins -----------------------------------
 
 " Disable auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

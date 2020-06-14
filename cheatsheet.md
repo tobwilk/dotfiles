@@ -66,7 +66,8 @@ specific to my configuration
         - p                     paste
         - >>                    Indent right
         - <<                    Indent left
-
+        - Ctrl+t                Indent, in insert mode
+        - Ctrl_d                Unindent, in insert mode
 
     - serching and replace
         - :%s/foo/bar/g         find all foo, and replace with bar
