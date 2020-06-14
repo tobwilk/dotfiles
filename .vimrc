@@ -25,6 +25,7 @@ set clipboard=unnamed
 set textwidth=80
 set autoindent          " always set autoindenting on
 set foldmethod=indent   " Allow folding based on ident
+set visualbell          " Disable anying bell on WSL
 filetype plugin on
 filetype indent on
 syntax on
