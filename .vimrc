@@ -34,9 +34,11 @@ syntax on
 " Make sure Plug is installed first
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
-Plug 'scrooloose/nerdtree'
-Plug 'vimwiki/vimwiki'
+Plug 'morhetz/gruvbox'              " nice colour theme
+Plug 'scrooloose/nerdtree'          " File explorer tree
+Plug 'vimwiki/vimwiki'              " A wiki, for vim`
+Plug 'tpope/vim-fugitive'           " Nice git integration
+Plug 'vim-airline/vim-airline'      " Nice status bar
 
 call plug#end()
 " Reload .vimrc and :PlugInstall to install plugins

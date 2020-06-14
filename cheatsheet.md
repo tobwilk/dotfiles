@@ -31,6 +31,7 @@ specific to my configuration
         - shift+a               Insert at end of line
         - /                     search mode. Hop with n & shift+n
         - * or #                hop between occurances of what your hovered on
+        - Ctrl+d/u              hop up and down half page jumps
 
      -Nerd Tree
         - leader + n            toggle
@@ -66,7 +67,7 @@ specific to my configuration
         - p                     paste
         - >>                    Indent right
         - <<                    Indent left
-        - Ctrl+t                Indent, in insert mode
+            - Ctrl+t                Indent, in insert mode
         - Ctrl_d                Unindent, in insert mode
 
     - serching and replace
