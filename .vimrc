@@ -20,12 +20,13 @@ set smartindent
 set number              " Shows line numbers
 set laststatus=2
 set ignorecase
-set mouse=a
+"set mouse=a
 set clipboard=unnamed
 set textwidth=80
 set autoindent          " always set autoindenting on
 set foldmethod=indent   " Allow folding based on ident
 set visualbell          " Disable anying bell on WSL
+set spell               " Enable spellchecker
 filetype plugin on
 filetype indent on
 syntax on
@@ -99,7 +100,7 @@ set autoindent
 
 " ---- VimWiki --------------
 " vimWiki config. Set this the root of your VimWIki directory
-let g:vimwiki_list = [{'path': '~/Dropbox/folders/1_PROJECTS/vimwiki/',
+let g:vimwiki_list = [{'path': '~/Dropbox/folders/1_PROJECTS/notes/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
 command! Diary VimwikiDiaryIndex

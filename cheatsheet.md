@@ -75,7 +75,7 @@ specific to my configuration
         - :%s/foo/bar/gc        same, but confirm before all replace
         - s/foo/bar/g           find foo on current line, and replace with bar
 
-    - spelling
+    - spelling. Alternativley use aspell check foo.txt
         - ]s and [s             moves between mispelled words
         - z=                    shows spelling alternatives
         - zg                    adds word to dictionary
