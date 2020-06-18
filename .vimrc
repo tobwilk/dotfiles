@@ -25,6 +25,7 @@ set clipboard=unnamed
 set textwidth=80
 set autoindent          " always set autoindenting on
 set foldmethod=indent   " Allow folding based on ident
+set foldlevel=20        " Auto unfold to level 20 (all)
 set visualbell          " Disable anying bell on WSL
 set spell               " Enable spellchecker
 filetype plugin on
