@@ -41,9 +41,9 @@ Plug 'scrooloose/nerdtree'          " File explorer tree
 Plug 'vimwiki/vimwiki'              " A wiki, for vim`
 Plug 'tpope/vim-fugitive'           " Nice git integration
 Plug 'vim-airline/vim-airline'      " Nice status bar
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "intellisense
 Plug 'junegunn/goyo.vim'            " Distraction free writer
 " Plug 'junegunn/limelight.vim'       " Text focusing - Disabled, Unsuported in WLS at the moment
-
 
 call plug#end()
 " Reload .vimrc and :PlugInstall to install plugins
@@ -124,5 +124,27 @@ autocmd BufWritePre * %s/\s\+$//e
 " Alias write and quit to Q
 nnoremap <leader>q :wq<CR>
 nnoremap <leader>w :w<CR>
+
+" ---- CoC configuration ----
+
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+
+" Recently vim can merge signcolumn and number column into one
+    set signcolumn=number
+else
+    set signcolumn=yes
+endif
+
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+
 
 
