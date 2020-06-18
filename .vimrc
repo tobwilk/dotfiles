@@ -25,6 +25,7 @@ set clipboard=unnamed
 set textwidth=80
 set autoindent          " always set autoindenting on
 set foldmethod=indent   " Allow folding based on ident
+set visualbell          " Disable anying bell on WSL
 filetype plugin on
 filetype indent on
 syntax on
@@ -40,6 +41,8 @@ Plug 'vimwiki/vimwiki'              " A wiki, for vim`
 Plug 'tpope/vim-fugitive'           " Nice git integration
 Plug 'vim-airline/vim-airline'      " Nice status bar
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "intellisense
+Plug 'junegunn/goyo.vim'            " Distraction free writer
+" Plug 'junegunn/limelight.vim'       " Text focusing - Disabled, Unsuported in WLS at the moment
 
 call plug#end()
 " Reload .vimrc and :PlugInstall to install plugins

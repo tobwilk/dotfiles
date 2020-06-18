@@ -92,6 +92,7 @@ specific to my configuration
 
     - Session managment
         - tmux ls                       List sessions
+        - tmux new -s name              Create new session with name
         - tmux a -t name                attach to session
         - tmux kill-session -t name     kill sesstion
         - leader + d                    detatch from within session
