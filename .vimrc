@@ -14,7 +14,7 @@ set ruler               " underlines current line
 set shiftwidth=4        " number of spaces to use for autoindenting
 set softtabstop=4       " when hitting <BS>, pretend like a tab is removed, even if spaces
 set cursorline
-"set cursorcolumn
+set cursorcolumn
 set smarttab            "insert tabs on the start of a line according to shiftwidth, not tabstop
 set smartindent
 set number              " Shows line numbers
@@ -27,6 +27,7 @@ set autoindent          " always set autoindenting on
 set foldmethod=indent   " Allow folding based on ident
 set foldlevel=20        " Auto unfold to level 20 (all)
 set visualbell          " Disable anying bell on WSL
+set colorcolumn=80      " guide ruler for line length
 "set spell               " Enable spellchecker
 filetype plugin on
 filetype indent on
@@ -44,12 +45,18 @@ Plug 'tpope/vim-fugitive'           " Nice git integration
 Plug 'vim-airline/vim-airline'      " Nice status bar
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "intellisense
 Plug 'junegunn/goyo.vim'            " Distraction free writer
+Plug 'frazrepo/vim-rainbow'         " Color matches brackets
+Plug 'jiangmiao/auto-pairs'         " auto closes brackets
+Plug 'airblade/vim-gitgutter'       " Show git status on the left.
 " Plug 'junegunn/limelight.vim'       " Text focusing - Disabled, Unsuported in WLS at the moment
 
 call plug#end()
 " Reload .vimrc and :PlugInstall to install plugins
 " ----- Plugins end ----------------------------------
 
+" Rainbox pairs filetypes
+au FileType c,cpp,objc,objcpp,js call rainbow#load()
+let g:rainbow_active = 1
 
 " Disable auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
