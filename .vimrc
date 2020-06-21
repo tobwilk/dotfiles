@@ -27,7 +27,7 @@ set autoindent          " always set autoindenting on
 set foldmethod=indent   " Allow folding based on ident
 set foldlevel=20        " Auto unfold to level 20 (all)
 set visualbell          " Disable anying bell on WSL
-set colorcolumn=80      " guide ruler for line length
+set colorcolumn=100      " guide ruler for line length
 "set spell               " Enable spellchecker
 filetype plugin on
 filetype indent on
@@ -48,6 +48,8 @@ Plug 'junegunn/goyo.vim'            " Distraction free writer
 Plug 'frazrepo/vim-rainbow'         " Color matches brackets
 Plug 'jiangmiao/auto-pairs'         " auto closes brackets
 Plug 'airblade/vim-gitgutter'       " Show git status on the left.
+Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
+Plug 'junegunn/fzf.vim'
 " Plug 'junegunn/limelight.vim'       " Text focusing - Disabled, Unsuported in WLS at the moment
 
 call plug#end()
@@ -70,6 +72,8 @@ set hlsearch
 "map <C-n> :NERDTreeToggle<CR>
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+nnoremap <C-p> :Files<Cr>           " map ctrl+p to fzf
 
 " Map jj to escape insert mode, its quicker
 imap jj <Esc>
