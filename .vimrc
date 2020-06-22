@@ -2,6 +2,8 @@
 " Tobys vimrc
 "
 
+
+
 let mapleader=" "       " set leader as space
 
 " Global settings
@@ -127,6 +129,8 @@ set background=dark
 let g:vimwiki_list = [{'path': '~/Dropbox/folders/1_PROJECTS/notes/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
+let g:vimwiki_table_mappings = 0        " enable coco to work in VimWiki
+
 command! Diary VimwikiDiaryIndex
 augroup vimwikigroup
     autocmd!
@@ -180,7 +184,7 @@ function! s:check_back_space() abort
   endfunction
 
   " Use <c-space> to trigger completion.
-  inoremap <silent><expr> <c-space> coc#refresh()
+  "inoremap <silent><expr> <c-space> coc#refresh()
 
   " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
   " position. Coc only does snippet and additional edit on confirm.
