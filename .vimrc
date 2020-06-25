@@ -1,6 +1,4 @@
-"
 " Tobys vimrc
-"
 
 
 
@@ -16,7 +14,7 @@ set ruler               " underlines current line
 set shiftwidth=4        " number of spaces to use for autoindenting
 set softtabstop=4       " when hitting <BS>, pretend like a tab is removed, even if spaces
 set cursorline
-set cursorcolumn
+"set cursorcolumn       " show vertical cursorline
 set smarttab            "insert tabs on the start of a line according to shiftwidth, not tabstop
 set smartindent
 set number              " Shows line numbers
@@ -97,6 +95,7 @@ Plug 'jiangmiao/auto-pairs'         " auto closes brackets
 Plug 'airblade/vim-gitgutter'       " Show git status on the left.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'          " Sets fzf root to gitfile
 " Plug 'junegunn/limelight.vim'       " Text focusing - Disabled, Unsuported in WLS at the moment
 
 call plug#end()
@@ -119,6 +118,18 @@ nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 
 " fzf
 nnoremap <C-p> :Files<Cr>           " map ctrl+p to fzf
+
+
+" RipGrep
+
+nnoremap <leader>g :Rg<CR>
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+
 
 " colours
 colorscheme gruvbox
